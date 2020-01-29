@@ -292,16 +292,23 @@ function counterMaker() {
  * etc
 */
 function counterMakerWithLimit(maxNum) {
-  let count = 0;
-  return function() {
-    if(count > maxNum) {
-      count = 1;
-    } else {
-      count++;
+  let count = -1;
+  return function counter() {
+    if (count === maxNum) {
+      count = -1;
     }
-    return count -1;
+    return ++count;
   }
-}
+//   let count = 0;
+//   return function() {
+//     if(count > maxNum) {
+//       count = 1;
+//     } else {
+//       count++;
+//     }
+//     return count -1;
+//   }
+// }
 
 /////////////// END OF CHALLENGE ///////////////
 /////////////// END OF CHALLENGE ///////////////
