@@ -292,7 +292,7 @@ function counterMaker() {
  * etc
 */
 function counterMakerWithLimit(maxNum) {
-  const count = 0;
+  let count = 0;
   return function() {
     if(count > maxNum) {
       count = 1;
